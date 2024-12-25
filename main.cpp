@@ -1,15 +1,19 @@
 #include "include/pool/thread_pool.h"
+
+#include <future>
 #include <iostream>
+#include <mutex>
 #include <thread>
-void a() { std::cout << std::this_thread::get_id() << std::endl; }
+
+xpp::pool::ThreadPool_ts t;
+
+void a() {}
 
 int main(int argc, char *argv[]) {
-  xpp::pool::ThreadPool_ts b;
 
-  b.addTask(a);
+  while (1) {
+    t.addTask(a);
+  }
 
-  b.addTask(a);
-  b.addTask(a);
-  b.addTask(a);
   return 0;
 }
