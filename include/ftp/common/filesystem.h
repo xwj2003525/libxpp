@@ -11,7 +11,7 @@ enum Type { Directory, ASCII_FILE, BINARY_FILE };
 
 struct Info {
   std::string name_;
-  std::string prefix_dir_;
+  std::string prefix__dir_;
   std::string owner_;
   std::uint64_t create_timestamp_;
   std::uint64_t last_modify_timestamp_;
